@@ -1,0 +1,195 @@
+main .trending_gifos{    
+    background: $bg_trending;
+    display: flex;
+    flex-flow: column wrap;
+    body.dark &{
+        background-color: $bg_darkTrending;
+        h2.title2 , p{
+            color: $white;
+        }
+        button{
+            background: none;
+        }
+            .btn-d{
+                background: none;
+                content: url('/Style/assets/button-slider-left-md-noct.svg');
+                }
+            .btn-u{
+                background: none;
+                content: url('/Style/assets/button-slider-right-md-noct.svg');
+                }
+    }
+    h2.title2{
+        color: $font_blue;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin: 20px 0;
+        width: 100vw;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;        
+        font-family: $font_roboto;
+        width: 100vw;
+    }
+  
+
+    button{
+        display: none;
+    }
+    .trending{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 187px;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        margin-bottom: 70px;
+        margin-top: 20px;
+        padding-left: 20px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .gif-actions {
+            object-fit: cover;
+            scroll-snap-align:center;
+            width: 246px;
+            height: 187px;              
+            margin: 0 10px 0 10px;    
+            img{
+                width: 246px;
+                height: 187px;
+               
+            }
+            .info-gifs{
+                display: none;
+            }
+                
+                               
+        }
+        
+    }
+}
+
+@media all and (min-width: 600px) {
+    main .trending_gifos{
+        padding: 30px 30px;
+        h2.title2{
+            font-size: 25px;
+            line-height: 30px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 21px;
+        }
+        .trending_container{
+            margin: 30px;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-around;
+            button{
+                display: unset;
+                background-repeat: no-repeat;
+                border: none;
+                cursor: pointer;
+            }
+            .trending{
+                display: flex;
+                flex-flow: row nowrap;
+                margin-top: 30px;
+                justify-content: space-between;
+                scroll-snap-type: none;
+                overflow: hidden;
+                .gif-actions{
+                    margin-top: 50px;
+                    width: 25vw;
+                    height: 100%;
+                    margin: 10px;
+                    position: relative;
+                    overflow: hidden;  
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        transition: all 500ms ease-out;
+                    }
+        
+                    .info-gifs{
+                        display: flex;
+                        flex-flow: column nowrap;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        padding: 5%;
+                        justify-content: space-between;
+                        background: $bg_violet;
+                        opacity: 0;
+                        transition: all 500ms ease-out;
+                        visibility: hidden;
+                        text-align: left;
+                        &:last-child{
+                            align-self: flex-end;
+                        }
+                        .icons-actions-gif{
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: flex-end;
+                            opacity: 1;
+        
+                            button{
+                                border: none;
+                                cursor: pointer;
+                                margin: 3px;
+                                border-radius: 6px;
+                            }
+                        }
+                        .Description-gif{
+                            align-items: flex-end;
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-start; 
+                            flex-wrap: wrap;                                                      
+                            color: $white;
+                            opacity: 1;
+                            font-family: $font_montserrat;
+                            font-weight: 500;
+
+                            .user-gif-results{
+                                font-family: $font_roboto;
+                                font-size: 15px;
+                                text-transform: lowercase;
+                                &::first-letter{
+                                text-transform: uppercase;
+                            }
+                            }
+                            .title-gif-results{
+                                font-family: $font_roboto;
+                                font-weight: bold;
+                                font-size: 16px;
+                                line-height: 19px;
+                                text-transform: lowercase;
+                                &::first-letter{
+                                text-transform: uppercase;
+                            }
+                            }
+                        }
+                    }
+                    &:hover> .info-gifs{
+                        opacity: 0.7;
+                        visibility: visible;
+                    }
+                                   
+                
+                }
+            }
+    
+        }
+    }
+}

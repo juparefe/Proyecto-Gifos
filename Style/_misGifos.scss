@@ -1,0 +1,120 @@
+main .misGifos{
+    .mios{
+        text-align: center;
+        color: $font_blue;
+        margin-top: 10px;
+        h2{
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+
+    .results{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        margin: 10px 20px;
+        justify-content: center;
+        align-items: center;
+       
+        .gif-actions {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;  
+            
+            img{
+                width: 100%;
+                height: 100%;
+                transition: all 500ms ease-out;
+            }
+
+            .info-gifs{
+                display: flex;
+                flex-flow: column nowrap;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 200px;
+                padding: 5%;
+                justify-content: space-between;
+                background: $bg_violet;
+                opacity: 0;
+                transition: all 500ms ease-out;
+                visibility: hidden;
+                text-align: left;
+                &:last-child{
+                    align-self: flex-end;
+                }
+                .icons-actions-gif{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-end;
+                    opacity: 1;
+
+                    button{
+                        border: none;
+                        cursor: pointer;
+                        margin: 3px;
+                        border-radius: 6px;
+                    }
+                }
+                .Description-gif{
+                    align-items: flex-end;
+                    color: $white;
+                    opacity: 1;
+                    font-family: $font_montserrat;
+                    font-weight: 500;
+
+                    .user-gif-results{
+                        font-family: $font_roboto;
+                        font-size: 15px;
+                        text-transform: lowercase;
+                        &::first-letter{
+                        text-transform: uppercase;
+                        }
+                    }
+                    .title-gif-results{
+                        font-family: $font_roboto;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-transform: lowercase;
+                        &::first-letter{
+                        text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            &:hover> .info-gifs{
+                opacity: 0.7;
+                visibility: visible;
+            }
+                           
+        }
+        
+    }
+    
+    .contenidoMis{
+        text-align: center;
+        color: $color_aqua;
+        padding: 20px 30px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        h4{
+            font-size: 22px;
+            line-height: 33px;
+        }
+    }
+    body.dark &{
+        .mios{
+            color: $white;
+        }
+        .contenidoMis{
+            color: $white;
+        }
+    }
+}

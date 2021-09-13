@@ -1,0 +1,187 @@
+nav{
+    body.dark &{
+        background: unset;
+        background-color: $bg_dark;
+        .menu .item a{
+            color: $white;
+        }
+        .item{
+            background-color: $color_black;
+        }
+        .img_nuevogifo{
+            content: url('/Style/assets/CTA-crar-gifo-modo-noc.svg');
+        }
+    }
+}
+body header{
+    
+    nav{
+        background-color:$bg_white;
+        width: 100vw;
+        height: 90px;
+        position: fixed;
+        top: 0;    
+        z-index: 2;
+       
+
+        ul{
+            list-style-type: none;
+            
+        }
+        .item a{
+            color: $white;
+            text-decoration: none;
+            &:hover{
+                color: $color_aqua;
+            }
+            
+        }
+        .logo a:hover {
+            text-decoration: none;
+        }
+        .menu li {
+            font-size: 16px;
+            padding: 15px 5px;
+            white-space: nowrap;
+        }
+        .logo a,.toggle a {
+            font-size: 20px;
+            margin: 5px 20px;
+        }
+        
+
+        /* Mobile menu*/
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+                 
+        }
+        .toggle {
+            order: 1;
+        }
+        
+        .item {
+            width: 100%;
+            text-align: center;
+            order: 3;
+            display: none;
+            background-color: $bg_mobile;
+
+        }
+        .item a{
+            font-size: 18px;
+            line-height: 60px;
+            font-weight: 600;
+            border-bottom: 1px solid $white;
+            padding-bottom: 10px;
+            
+        }
+        .item.active {
+            display: block;
+        }
+        #gifos.active{
+            padding-bottom: 50vh;
+        }
+        .item.button {
+            display: none;
+        }
+    }
+}
+    /* Tablet menu 
+@media all and (min-width: 600px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      order: 2;
+    }
+  
+    .button a:hover {
+        text-decoration: none;
+    }
+}*/
+    /* Desktop menu */
+@media all and (min-width: 700px) {
+    body header nav{
+        
+    
+        .menu{
+            .item {
+            display: flex;
+            flex-flow: row nowrap;
+            width: auto;
+            background-color: unset;
+            &.active{
+                color: $font_activew;
+            }
+            a{
+                font-size: 13px;
+                line-height: 16px;
+                color:$font_blue;
+                display: unset;
+                background-color: unset;
+                text-transform: uppercase;
+                font-weight: 700;
+                border: unset;
+                &:hover{
+                    color: $color_aqua;
+                }
+                &.active{
+                    color: $font_activew;
+                }
+                
+            }
+            }
+            .toggle {
+            display: none;
+            }
+            .logo {
+            order: 0;
+            margin-left: 40px;
+            margin-top: 10px;
+            
+            }
+            .item {
+            order: 1;
+            }
+            .button {
+            order: 2;
+            }
+            li {
+            padding: 15px 10px;
+            &.dark{
+                color: $white;
+            }
+            }
+            li.button {
+            padding-right: 0;
+            
+            }
+
+            .item.button{
+                display: unset;
+                margin-right: 70px;
+                img{
+                    width: 54px;
+                    height: 54px;
+                }
+            }
+            
+        }
+    }
+}
+  

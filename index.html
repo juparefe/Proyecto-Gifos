@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>GIFOS</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="index.html" ><img id="logo" class="img_logo" src="/Style/assets/logo-mobile.svg" alt="logo gifos"></a></li>
+                <li class="item"><a href="#" id="modoNoche">Modo Nocturno</a></li>
+                <li class="item"><a href="favorites.html">Favoritos</a></li>
+                <li class="item" id="gifos"><a href="misGifos.html">Mis GIFOS</a></li>                              
+                <li class="item button"><a href="newGifo.html" id="newGifo"><img class="img_nuevogifo" src="/Style/assets/button-crear-gifo.svg" alt="crear gifo"></a></li>
+                <li class="toggle"><a href="#"><img class="img_burger" src="/Style/assets/burger.svg" alt="menu" id="toggle"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="mobile"></div>
+        <section class="search">
+            <h1 class="title1">Inspírate, busca, guarda y crea los mejores <span id="aqua">GIFOS</span></h1>
+            <img class="img_search" src="/Style/assets/ilustra_header.svg" alt="ilustracion">
+            <div class="search_box">
+                <div class="container-1">
+                    <span class="icon"><img id="submit" src="/Style/assets/icon-search.svg" alt="buscar"></span>
+                    <span class="reset"><img id="reset" src="/Style/assets/close.svg" alt="cerrar" style="display: none;"></span>
+                    <div id="input-container">
+                    <div id="icon-active" hidden><i class="fas fa-search"></i></div>
+                    <input type="text" id="search-input" placeholder="Busca GIFOS y más" autocomplete="off"/>
+                    </div>
+                    <hr class="search-line" id="search-line" style="display: none;">
+                    <ul id="search-prompt"></ul>
+                </div>   
+            </div>
+            <h3 class="sub_trending ">Trending:</h3>
+            <h4 class="sub_trending">Reactions, Entertainment, Sports, Stickers, Artists</h4>
+            <h3 class="search-text" id="search-text"></h3>
+            <button id="less" class="less-more" style="display: none;">ATRAS</button>
+            <div id="results" class="results"></div>
+            <button id="more" class="less-more" style="display: none;">VER MAS</button>
+        </section>
+        <section class="trending_gifos" id="trending_gifos">
+            <h2 class="title2">Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <div class="trending_container" id="trending_container">
+                <button id="btn-down"><img src="Style/assets/button-slider-left.svg" alt="atras" class="btn-d"></button>    
+                <div id="trending" class="trending"></div>    
+                <button id="btn-up"><img src="Style/assets/Button-Slider-right.svg" alt="adelante"  class="btn-u"></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Compartir en:</p>
+            <div class="social">
+                <a href="https://www.facebook.com/GIPHY" target="_blank"><img src="/Style/assets/icon_facebook.svg" alt="facebook"></a>
+                <a href="https://twitter.com/GIPHY" target="_blank"><img src="/Style/assets/icon-twitter.svg" alt="twitter"></a>
+                <a href="https://instagram.com/giphy?utm_medium=copy_link" target="_blank"><img src="/Style/assets/icon_instagram.svg" alt="instagram"></a>
+            </div>
+        </div>
+        <p class="copyRigth">© GIFOS 2020 All Rights Reserved</p>
+    </footer>
+    
+    <script src="Script/index.js"></script>
+    <script src="Script/menu.js"></script>
+</body>
+</html>
