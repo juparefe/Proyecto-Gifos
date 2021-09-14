@@ -533,6 +533,24 @@ main .search .results .gif-actions:hover > .info-gifs {
   visibility: visible;
 }
 
+main .search .less-more {
+  font-size: 13px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 16px;
+  width: 20%;
+  border: 1px solid #572EE5;
+  color: #572EE5;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
 @media all and (min-width: 700px) {
   main .search {
     -webkit-box-pack: center;
