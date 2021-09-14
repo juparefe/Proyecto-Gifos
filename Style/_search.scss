@@ -243,6 +243,21 @@ main .search{
         }
         
     }
+    .less-more{
+        font-size: 13px;
+        margin: auto;
+        justify-content: center;
+        line-height: 16px;
+        width: 20%;
+        border: 1px solid $font_blue;
+        color: $font_blue;
+        font-weight: 600;
+        font-family:$font_montserrat ;
+        padding: 10px 15px;
+        border-radius: 25px;
+        background-color: $white;
+        cursor: pointer;
+    }
 }
 @media all and(min-width: 700px) {
     main .search{
