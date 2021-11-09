@@ -12,7 +12,7 @@
     div{
         display: flex;
         justify-content: right;
-        padding: 5vh 10vw;
+        padding: 5vh 5vw;
         .mobile-close{
             justify-self: end;
             border: none;
@@ -30,6 +30,7 @@
     }
     .card{
         width: 100vw;
+        max-width: 100%
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
