@@ -1575,11 +1575,16 @@ main .trending_gifos .trending .gif-actions .info-gifs {
 }
 
 .expand-mobile-activated {
-  display: unset;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1591,17 +1596,17 @@ main .trending_gifos .trending .gif-actions .info-gifs {
   padding: 40px 30px;
 }
 
-.expand-mobile-activated div {
+.expand-mobile-activated .container-mobile-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
 }
 
-.expand-mobile-activated div .mobile-close {
+.expand-mobile-activated .container-mobile-close .mobile-close {
   -ms-grid-column-align: end;
       justify-self: end;
   border: none;
@@ -1612,26 +1617,43 @@ main .trending_gifos .trending .gif-actions .info-gifs {
 
 .expand-mobile-activated .mobile-gif {
   margin-top: 30px;
-  height: 40vh;
-  width: 50vw;
+  width: 60%;
   margin: 0 auto;
 }
 
 .expand-mobile-activated .card {
-  width: 100vw;
+  max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
 }
 
-.expand-mobile-activated .card .mobile-btn {
+.expand-mobile-activated .card .mobile-text {
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.expand-mobile-activated .card .mobile-expand-icons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 30%;
+}
+
+.expand-mobile-activated .card .mobile-expand-icons .mobile-btn {
   border: none;
   background: none;
   cursor: pointer;
@@ -1668,7 +1690,7 @@ main .trending_gifos .trending .gif-actions .info-gifs {
     margin: 30px;
   }
   .expand-mobile-activated .card {
-    width: 100%;
+    max-width: 100%;
     padding: 0 25%;
   }
   .expand-mobile-activated .card .mobile-text {
