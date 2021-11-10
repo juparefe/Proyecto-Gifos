@@ -39,6 +39,7 @@
         margin: 1rem;
         .mobile-text{
             width: 60%;
+            flex-direction: column;
         }
         .mobile-expand-icons{
             flex-flow: row nowrap;
