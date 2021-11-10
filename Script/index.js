@@ -319,7 +319,7 @@ function search_function(params, maxGif, id) {
 //Para añadir los tres botones de funcionalidad a cada imagen
 function putButtons(content, i, string) {
     let buttons = `
-    <div class="gif-actions" onclick="pressButton('${content.data[i].images.fixed_width.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.username}', '${content.title}')">                    
+    <div class="gif-actions" onclick="pressButton('${content.data[i].images.fixed_width.url}', '${content.data[i].id}', '${content.data[i].slug}', '${content.data[i].username}', '${content.data[i].title}')">
         <img src="${content.data[i].images.fixed_width.url}" alt="${content.data[i].id}" class="results-gif" >
         <div class="info-gifs" >
             <div class="icons-actions-gif">
@@ -347,16 +347,13 @@ function putButtons(content, i, string) {
 }
 
 //Al presionar el gif en mobile
+//Maximizar al seleccionar el gif en mobile a 700px 
 function pressButton(img, id, slug, user, title) {
-    if (window.matchMedia("(min-width: 700px)").matches) {   
-    } //Maximizar al seleccionar el gif en mobile a 700px
-    else{
-        console.log("Mobile");
+    if (window.matchMedia("(max-width: 700px)").matches) { 
         mobileExpand.classList.add("expand-mobile-activated");
         document.body.appendChild(mobileExpand);
-        console.log("<700px")
         mobileExpand.innerHTML = `
-        <div>
+        <div class="container-mobile-close">
             <button class="mobile-close" onclick="closeMobileExpand()"><img src="./Style/assets/close.svg" alt=""></button>
         </div>
         <img src="${img}" alt="${id}" class="mobile-gif">
@@ -365,16 +362,14 @@ function pressButton(img, id, slug, user, title) {
                 <p class="mobile-user">${user}</p>
                 <p class="mobile-title">${title}</p>
             </div>
-            <div>
+            <div class="mobile-expand-icons">
                 <button class="icon-action-favorite" onclick="addFavorite('${id}')">
                     <img src="./Style/assets/icon-fav.svg" id="icon-borrar-fav-${id}">
                 </button>
                 <button class="mobile-btn" onclick="downloadGif('${img}', '${slug}')"><img src="./Style/assets/icon-download.svg" alt="download-gif"></button>
             </div>
-        </div>`;
-        /* Si se quisiera hacer directamente en javscript
-        mobileExpand.style.position = "fixed";*/
-    }   
+        </div>`;  
+    } 
 }
 
 //Lo que pasa al presionar el boton de favorito en el gif
